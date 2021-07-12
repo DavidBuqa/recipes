@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import IndexPage from './Components/Pages/IndexPage';
+import RecipePage from './Components/Pages/RecipePage';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <BrowserRouter>
+        <Route path="/" exact component={IndexPage} />
+        <Route path="/recipe/:id" component={RecipePage} />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

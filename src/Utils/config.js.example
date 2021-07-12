@@ -1,0 +1,4 @@
+export const config = {
+    API_KEY: "",
+    SPOONACULAR_API: "https://api.spoonacular.com"
+};
